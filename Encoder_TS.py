@@ -18,6 +18,7 @@ class Encoder:
 
     def forward(self, x):
 
+
         h = np.tanh(np.dot(x, self.W1) + self.b1)
         mu = np.dot(h, self.W_mu) + self.b_mu
         logvar = np.dot(h, self.W_logvar) + self.b_logvar
