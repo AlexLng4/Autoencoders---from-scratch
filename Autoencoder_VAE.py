@@ -63,6 +63,7 @@ if __name__ == '__main__':
         for i in range(0, num_series, batch_size):
 
             x_batch = x[i]
+            x_batch = x_batch.reshape(x_batch.shape[0], 1)
 
             # forward
             mu, logvar = encoder.forward(x_batch)
